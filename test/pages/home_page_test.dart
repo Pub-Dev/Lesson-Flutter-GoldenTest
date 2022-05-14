@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:golden_toolkit/golden_toolkit.dart';
 import 'package:pubdev_flutter_goldentest/pages/home_page.dart';
 
@@ -9,8 +11,7 @@ void main() {
       ..overrideDevicesForAllScenarios(devices: [
         Device.phone,
         Device.iphone11,
-        Device.tabletPortrait,
-        Device.tabletLandscape,
+        const Device(name: 'naga_phone', size: Size(400, 600), textScale: 1.5),
       ])
       ..addScenario(
         name: 'Testing the Home Page',
